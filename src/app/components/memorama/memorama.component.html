@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="intentos">
+    <h1 style="text-align: center; font-size: 320%; margin-top: 1%"><b>Memorama</b></h1>
+  </div>
+  <mat-grid-list cols="8" rowHeight="2:1" >
+  <div class="memorama">
+  <span *ngFor="let card of cards; index as i">
+   <mat-grid-tile> <img class="img-card" src="{{card.visible ? card.url : imgfondo}}" (click)="cartaseleccionada(i)"></mat-grid-tile>
+  </span>
+  </div>
+  </mat-grid-list>
+</div>
